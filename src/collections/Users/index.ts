@@ -8,7 +8,7 @@ export const Users: CollectionConfig = {
     admin: authenticated,
     create: authenticated,
     delete: authenticated,
-    read: ()=>true,
+    read: authenticated,
     update: authenticated,
   },
   admin: {
@@ -20,7 +20,6 @@ export const Users: CollectionConfig = {
     {
       name: 'name',
       type: 'text',
-      required:true,
     },
   ],
   timestamps: true,
